@@ -12,7 +12,7 @@ Output fields per listing:
 - condition_type, version_fullname
 - seller_name, seller_city, seller_zipcode
 - created_date, last_modified_date
-- images_online (count), image_keys (list of image URLs)
+- images_online (count)
 - url
 
 Author: AutoDataScrape
@@ -164,7 +164,6 @@ def extract_listing(item: dict) -> dict | None:
         "created_date":         item.get("createdDate"),
         "last_modified_date":   item.get("lastModifiedDate"),
         "images_online":        len(image_keys),
-        "image_keys":           image_keys,
         "url":                  url,
     }
 
