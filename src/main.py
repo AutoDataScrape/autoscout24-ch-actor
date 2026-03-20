@@ -129,13 +129,13 @@ def extract_listing(item: dict) -> dict | None:
     seller_zip   = seller_data.get("zipCode") if isinstance(seller_data, dict) else None
 
     # --- Images ---
-    images_raw  = item.get("images", [])
+    images_raw  = item.get("images") or []
     image_keys  = [
         IMAGE_BASE_URL + img["key"]
         for img in images_raw
         if isinstance(img, dict) and img.get("key")
     ]
-
+    
     # --- URL ---
     if make_key and model_key:
         url = f"{BASE_URL}/de/auto/{make_key.lower()}/{model_key.lower()}?vehid={listing_id}"
