@@ -1,0 +1,35 @@
+{
+    "actorSpecification": 1,
+    "views": {
+        "overview": {
+            "title": "Car Listings",
+            "transformation": {
+                "fields": [
+                    "listing_id", "title", "make_name", "model_name",
+                    "price", "previous_price", "mileage",
+                    "first_registration_date", "power_kw", "power_ps",
+                    "fuel_type", "transmission", "condition_type",
+                    "seller_name", "seller_city", "seller_zipcode",
+                    "images_online", "image_keys", "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "url":                    { "label": "Link",           "format": "link" },
+                    "title":                  { "label": "Title",          "format": "text" },
+                    "make_name":              { "label": "Make",           "format": "text" },
+                    "model_name":             { "label": "Model",          "format": "text" },
+                    "price":                  { "label": "Price (CHF)",    "format": "number" },
+                    "previous_price":         { "label": "Prev. Price",    "format": "number" },
+                    "mileage":                { "label": "Mileage (km)",   "format": "number" },
+                    "power_ps":               { "label": "Power (PS)",     "format": "number" },
+                    "fuel_type":              { "label": "Fuel",           "format": "text" },
+                    "transmission":           { "label": "Transmission",   "format": "text" },
+                    "seller_city":            { "label": "City",           "format": "text" },
+                    "images_online":          { "label": "Images",         "format": "number" }
+                }
+            }
+        }
+    }
+}
