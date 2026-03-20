@@ -1,0 +1,45 @@
+{
+    "title": "AutoScout24.ch Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "maxPagesPerTask": {
+            "title": "Max pages per task",
+            "type": "integer",
+            "description": "Max listing pages per parallel task. 8 tasks run in parallel covering pages 0–8000. Each page returns ~20 ads.",
+            "default": 1000,
+            "minimum": 1,
+            "maximum": 2000
+        },
+        "pageSizeApi": {
+            "title": "Page size (ads per API request)",
+            "type": "integer",
+            "description": "Number of listings returned per API page.",
+            "default": 20,
+            "minimum": 10,
+            "maximum": 50
+        },
+        "minRequestDelay": {
+            "title": "Min delay between requests (seconds)",
+            "type": "number",
+            "description": "Minimum pause between API calls per task.",
+            "default": 1.0,
+            "minimum": 0.5
+        },
+        "maxRequestDelay": {
+            "title": "Max delay between requests (seconds)",
+            "type": "number",
+            "description": "Maximum pause between API calls per task.",
+            "default": 2.5,
+            "minimum": 1.0
+        },
+        "writeInterval": {
+            "title": "Write interval (pages)",
+            "type": "integer",
+            "description": "Push results to dataset every N pages per task.",
+            "default": 100,
+            "minimum": 10,
+            "maximum": 500
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "actorSpecification": 1,
+    "name": "autoscout24-ch-scraper",
+    "title": "AutoScout24.ch Car Listings Scraper",
+    "version": "0.1",
+    "buildTag": "latest",
+    "minMemoryMbytes": 1024,
+    "maxMemoryMbytes": 4096,
+    "dockerfile": "./Dockerfile",
+    "readme": "./README.md",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    }
+}
